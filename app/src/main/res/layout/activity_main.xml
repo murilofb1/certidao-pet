@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/main_activity_background"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="never"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgViewPetPic"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cat_saiki"
+
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundedShapeAppearance" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imgBtnPetPic"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleX="3"
+            android:scaleY="3"
+            android:src="@drawable/ic_baseline_camera_alt_24"
+            android:tint="@color/darkerBlue"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundedShapeAppearance" />
+
+        <include
+            android:id="@+id/edt_txt_name"
+            layout="@layout/material_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_ra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgViewPetPic" />
+
+        <include
+            android:id="@+id/edt_txt_ra"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txtgender"
+            app:layout_constraintEnd_toStartOf="@id/edt_txt_birth_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_name" />
+
+        <include
+            android:id="@+id/edt_txt_birth_date"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/edt_txt_ra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_txt_ra"
+            app:layout_constraintTop_toTopOf="@id/edt_txt_ra" />
+
+        <include
+            android:id="@+id/edt_txtgender"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_race"
+            app:layout_constraintEnd_toStartOf="@id/edt_txt_birth_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_birth_date" />
+
+        <include
+            android:id="@+id/edt_txt_castrated"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/edt_txtgender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_txt_ra"
+            app:layout_constraintTop_toTopOf="@id/edt_txtgender" />
+
+        <include
+            android:id="@+id/edt_txt_race"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_mother_name"
+            app:layout_constraintEnd_toStartOf="@id/edt_txt_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txtgender" />
+
+        <include
+            android:id="@+id/edt_txt_color"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/edt_txt_race"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_txt_race"
+            app:layout_constraintTop_toTopOf="@id/edt_txt_race" />
+
+        <include
+            android:id="@+id/edt_txt_mother_name"
+            layout="@layout/material_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_father_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_color" />
+
+        <include
+            android:id="@+id/edt_txt_father_name"
+            layout="@layout/material_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/edt_txt_born_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_mother_name" />
+
+        <include
+            android:id="@+id/edt_txt_born_in"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/edt_txt_expedition_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_father_name" />
+
+        <include
+            android:id="@+id/edt_txt_expedition_date"
+            layout="@layout/material_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/edt_txt_born_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_txt_born_in"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_father_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/TransparentButton"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="@id/btnAction"
+            app:layout_constraintEnd_toStartOf="@id/btnAction"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnAction" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAction"
+            style="@style/DefaultButton"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
+            android:text="@string/edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnCancel"
+            app:layout_constraintTop_toBottomOf="@id/edt_txt_expedition_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

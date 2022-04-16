@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CertidaoPet</string>
+    <string name="edit">Editar</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="name">Nome</string>
+    <string name="ra">RA (Registro Animal)</string>
+    <string name="birthDate">Data de Nascimento</string>
+    <string name="gender">Gênero</string>
+    <string name="race">Raça</string>
+    <string name="color">Cor</string>
+    <string name="mother_name">Nome da Mãe</string>
+    <string name="father_name">Nome do Pai</string>
+    <string name="expedition_date">Data de Expedição</string>
+    <string name="born_in">Naturalidade</string>
+    <string name="castrated">Castrado</string>
+    <string name="save">Salvar</string>
+</resources>

@@ -1,0 +1,17 @@
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/textLayout"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="match_parent"
+    app:boxStrokeColor="@color/darkBlue"
+    android:textColorHint="@color/darkBlue"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textField"
+        android:imeOptions="actionDone"
+        android:layout_width="match_parent"
+        android:lines="1"
+        android:inputType="textCapWords|textNoSuggestions"
+        android:layout_height="wrap_content" />
+</com.google.android.material.textfield.TextInputLayout>
